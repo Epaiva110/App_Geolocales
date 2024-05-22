@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="12dp"
+    tools:context=".GPS_old">
+
+    <!-- Title -->
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_baseline_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblOptionTitle"
+        style="@style/optionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/title_gps"
+        app:layout_constraintStart_toEndOf="@+id/imgClose"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_soft"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblOptionTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <!--  -->
+
+    <!-- Body -->
+    <!-- style="@style/appProgressbar" -->
+    <ProgressBar
+        android:id="@+id/pbrWaitButton"
+        android:indeterminateDrawable="@drawable/progress_background"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblLine" />
+
+    <TextView
+        android:id="@+id/lblWaitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:text="@string/gps_initial"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/pbrWaitButton"
+        app:layout_constraintEnd_toEndOf="@+id/pbrWaitButton"
+        app:layout_constraintStart_toStartOf="@+id/pbrWaitButton"
+        app:layout_constraintTop_toTopOf="@+id/pbrWaitButton" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glnCenterVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/lblLatitud"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                style="@style/appCoordsLabel"
+                android:text="@string/lat"
+                app:layout_constraintTop_toBottomOf="@+id/pbrWaitButton"
+                app:layout_constraintEnd_toStartOf="@+id/glnCenterVertical" />
+
+            <TextView
+                android:id="@+id/txtLatitud"
+                android:layout_width="80dp"
+                android:layout_height="22dp"
+                style="@style/appCoordsText"
+                android:text="@string/coords_initial"
+                app:layout_constraintTop_toBottomOf="@+id/pbrWaitButton"
+                app:layout_constraintStart_toEndOf="@+id/glnCenterVertical" />
+
+            <TextView
+                android:id="@+id/lblLongitud"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                style="@style/appCoordsLabel"
+                android:text="@string/lng"
+                app:layout_constraintTop_toBottomOf="@+id/lblLatitud"
+                app:layout_constraintEnd_toStartOf="@+id/glnCenterVertical" />
+
+            <TextView
+                android:id="@+id/txtLongitud"
+                android:layout_width="80dp"
+                android:layout_height="22dp"
+                style="@style/appCoordsText"
+                android:text="@string/coords_initial"
+                app:layout_constraintTop_toBottomOf="@+id/txtLatitud"
+                app:layout_constraintStart_toEndOf="@+id/glnCenterVertical" />
+
+            <TextView
+                android:id="@+id/txtAltitud"
+                android:layout_width="80dp"
+                android:layout_height="22dp"
+                style="@style/appCoordsText"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="@+id/txtLongitud"
+                app:layout_constraintStart_toEndOf="@+id/txtLongitud" />
+
+            <TextView
+                android:id="@+id/lblPrecision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                style="@style/appCoordsLabel"
+                android:text="@string/prc"
+                android:maxLength="9"
+                app:layout_constraintBottom_toTopOf="@+id/barPrecisionMedium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtPrecision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                style="@style/appCoordsText"
+                android:visibility="invisible"
+                android:text="@string/precs_initial"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/lblTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                style="@style/appCoordsText"
+                android:visibility="invisible"
+                android:text="0 s."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                 />
+
+                <!-- Precision bar -->
+                <TextView
+                    android:id="@+id/barPrecisionHigh"
+                    android:layout_width="70dp"
+                    android:layout_height="13dp"
+                    android:text=""
+                    android:background="@drawable/precisionbar_background_green"
+                    app:layout_constraintEnd_toStartOf="@+id/barPrecisionMedium"
+                    app:layout_constraintTop_toTopOf="@+id/barPrecisionMedium" />
+
+                <TextView
+                    android:id="@+id/barPrecisionMedium"
+                    android:layout_width="70dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/precisionbar_background_yellow"
+                    android:text=""
+                    app:layout_constraintTop_toBottomOf="@+id/txtLongitud"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/barPrecisionLow"
+                    android:layout_width="70dp"
+                    android:layout_height="13dp"
+                    android:background="@drawable/precisionbar_background_red"
+                    android:text=""
+                    app:layout_constraintStart_toEndOf="@+id/barPrecisionMedium"
+                    app:layout_constraintTop_toTopOf="@+id/barPrecisionMedium" />
+
+                <TextView
+                    android:id="@+id/lblPrecisionHigh"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Buena"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toStartOf="@+id/lblPrecisionMedium"
+                    app:layout_constraintTop_toTopOf="@+id/lblPrecisionMedium" />
+
+                <TextView
+                    android:id="@+id/lblPrecisionMedium"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Regular"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/barPrecisionMedium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/lblPrecisionLow"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mala"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@+id/lblPrecisionMedium"
+                    app:layout_constraintTop_toTopOf="@+id/lblPrecisionMedium" />
+
+                <!--  -->
+
+    <!--  -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

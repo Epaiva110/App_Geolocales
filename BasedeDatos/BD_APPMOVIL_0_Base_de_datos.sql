@@ -1,0 +1,19 @@
+USE [master]
+GO  
+-- Creación de la base de datos
+CREATE DATABASE [AplicativoMovil]
+ON PRIMARY
+( NAME = APPMOVIL_dat,  
+    FILENAME = 'D:\App_Movil\ESTAD_DATA\APPMOVIL_dat.mdf',  --- MODIFICAR DE ACUERDO A DONDE SE ALMACENARA EN EL SERVIDOR
+    SIZE = 200MB,  
+    MAXSIZE = UNLIMITED,  
+    FILEGROWTH = 10% )  
+LOG ON  
+( NAME = APPMOVIL_log,  
+    FILENAME = 'D:\App_Movil\ESTAD_LOG\APPMOVIL_log.ldf',  --- MODIFICAR DE ACUERDO A DONDE SE ALMACENARA EN EL SERVIDOR
+    SIZE = 50MB,  
+    MAXSIZE = UNLIMITED,  
+    FILEGROWTH = 10% )
+COLLATE Modern_Spanish_CI_AS;  
+GO  
+-- DROP DATABASE [AplicativoMovil]

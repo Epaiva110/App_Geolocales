@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="12dp"
+    tools:context=".MainActivityTest">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/lblTitle"
+        style="@style/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:text="@string/app_main_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgArchive"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/ic_baseline_archive"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/lblLine" />/>
+
+    <TextView
+        android:id="@+id/lblLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_soft"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Body -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/lblLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/lblLine2"
+        >
+
+        <!-- Por defecto ScrollView maneja Linear Layout, ver si es necesario mantener el ConstraintLayout -->
+        <!-- Se elimino: android:orientation="vertical" -->
+        <!-- Se incluyó las siguientes lineas para evitar el focus en el EditText
+             y la aparición del teclado al iniciar la actividad
+
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+        -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/lblMessage"
+                style="@style/appText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/main_instructions"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+                <!--                 android:textAlignment="textStart" -->
+
+            <!-- Item 1: Ingresar el código modular -->
+            <TextView
+                android:id="@+id/lblNumberItem01"
+                style="@style/appLabelNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="1"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/txtObjectItem01"
+                app:layout_constraintTop_toTopOf="@+id/txtObjectItem01" />
+
+                <!--
+                app:layout_constraintTop_toBottomOf="@+id/lblTextItem01"
+                android:textSize="16dp"
+                -->
+            <EditText
+                android:id="@+id/txtObjectItem01"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/input_background"
+                android:drawableStart="@drawable/ic_baseline_service"
+                android:drawablePadding="10dp"
+                android:textSize="20sp"
+                android:hint="@string/instructions_item01"
+                android:inputType="number"
+                android:maxLength="7"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblMessage" />
+
+                <TextView
+                    android:id="@+id/txtDescItem01"
+                    style="@style/appText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:minHeight="50dp"
+                    android:text=""
+                    app:layout_constraintStart_toEndOf="@+id/lblNumberItem01"
+                    app:layout_constraintTop_toBottomOf="@+id/txtObjectItem01"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <!-- Item 2: Capturar coordenadas -->
+            <TextView
+                android:id="@+id/lblNumberItem02"
+                style="@style/appLabelNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="2"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/btnObjectItem02"
+                app:layout_constraintTop_toBottomOf="@+id/txtDescItem01" />
+
+            <Button
+                android:id="@+id/btnObjectItem02"
+                style="@style/appButtonItem"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_coords"
+                android:drawableRight="@drawable/ic_baseline_arrow_right"
+                android:text="@string/instructions_item02"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDescItem01" />
+
+                <TextView
+                    android:id="@+id/lblBlank"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnObjectItem02" />
+
+                <TextView
+                    android:id="@+id/lblLatitud"
+                    style="@style/appText"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/lat"
+                    app:layout_constraintStart_toEndOf="@+id/lblNumberItem02"
+                    app:layout_constraintTop_toBottomOf="@+id/lblBlank" />
+
+                <TextView
+                    android:id="@+id/txtLatitud"
+                    style="@style/appText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:text="..."
+                    android:maxLength="10"
+                    app:layout_constraintStart_toEndOf="@+id/lblLatitud"
+                    app:layout_constraintTop_toBottomOf="@+id/lblBlank" />
+
+                <TextView
+                    android:id="@+id/lblLongitud"
+                    style="@style/appText"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/lng"
+                    app:layout_constraintStart_toEndOf="@+id/lblNumberItem02"
+                    app:layout_constraintTop_toBottomOf="@+id/lblLatitud" />
+
+                <TextView
+                    android:id="@+id/txtLongitud"
+                    style="@style/appText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="..."
+                    android:maxLength="10"
+                    app:layout_constraintStart_toEndOf="@+id/lblLongitud"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLatitud" />
+
+                <!-- -->
+                <TextView
+                    android:id="@+id/lblPrecision"
+                    style="@style/appText"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/prc"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toEndOf="@+id/txtLatitud"
+                    app:layout_constraintTop_toTopOf="@+id/lblLatitud" />
+
+                <TextView
+                    android:id="@+id/txtPrecision"
+                    style="@style/appText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="..."
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toEndOf="@+id/lblPrecision"
+                    app:layout_constraintTop_toTopOf="@+id/txtLatitud" />
+
+                <TextView
+                    android:id="@+id/lblAltitud"
+                    style="@style/appText"
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/alt"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toEndOf="@+id/txtLongitud"
+                    app:layout_constraintTop_toTopOf="@+id/lblLongitud" />
+
+                <TextView
+                    android:id="@+id/txtAltitud"
+                    style="@style/appText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="..."
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toEndOf="@+id/lblAltitud"
+                    app:layout_constraintTop_toTopOf="@+id/txtLongitud" />
+                <!-- -->
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/grpLatLng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="lblLatitud,txtLatitud,lblLongitud,txtLongitud" />
+
+
+
+            <!-- Item 3: Tomar foto -->
+            <TextView
+                android:id="@+id/lblNumberItem03"
+                style="@style/appLabelNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="3"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/btnObjectItem03"
+                app:layout_constraintTop_toBottomOf="@+id/lblLongitud" />
+
+            <Button
+                android:id="@+id/btnObjectItem03"
+                style="@style/appButtonItem"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:drawableLeft="@drawable/ic_baseline_camera_default"
+                android:drawableRight="@drawable/ic_baseline_arrow_right"
+                android:text="@string/instructions_item03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblLongitud" />
+
+            <!--android:scaleType="centerInside"-->
+            <ImageView
+                android:id="@+id/imgPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:padding="5dp"
+                android:cropToPadding="true"
+                app:layout_constraintTop_toBottomOf="@+id/btnObjectItem03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/lblLine2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/gray_soft"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnSend"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/send"
+        style="@style/appButtonPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

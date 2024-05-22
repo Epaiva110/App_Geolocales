@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="12dp"
+    tools:context=".Main">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/lblMainTitle"
+        style="@style/appTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_main_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imgArchive"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_baseline_archive2"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lblMainTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/lblMainTitle" />
+
+    <TextView
+        android:id="@+id/lblLineTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_middle"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblMainTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Body -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/lblMainTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnSend" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/lblMessage"
+                style="@style/appText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/main_instructions"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgCode"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/ic_baseline_service"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblMessage" />
+
+                <TextView
+                    android:id="@+id/lblCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="3dp"
+                    android:text="Ingrese el Código Modular"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/imgCode"
+                    app:layout_constraintTop_toTopOf="@+id/imgCode" />
+
+                <!-- Ingrese código del servicio -->
+                <EditText
+                    android:id="@+id/txtCode"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/input_background2"
+                    android:hint="0000000"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:textSize="20sp"
+                    android:paddingStart="12dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintStart_toStartOf="@+id/lblCode"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCode" />
+
+                <TextView
+                    android:id="@+id/lblBlankSpace"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text=""
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="@+id/lblCode"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCode"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text=""
+                    android:textSize="16dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/lblCode"
+                    app:layout_constraintTop_toBottomOf="@+id/lblBlankSpace"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/lblLineCode"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/gray_middle"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="@+id/lblCode"
+                    app:layout_constraintTop_toBottomOf="@+id/txtName"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgLocation"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/list_precision_status"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblLineCode" />
+
+            <TextView
+                android:id="@+id/lblLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="3dp"
+                android:clickable="true"
+                android:text="Obtenga las coordenadas"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgLocation"
+                app:layout_constraintTop_toTopOf="@+id/imgLocation" />
+
+                <ImageView
+                    android:id="@+id/imgLocationArrow"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="2dp"
+                    app:srcCompat="@drawable/ic_baseline_arrow_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/lblLocation" />
+
+                <TextView
+                    android:id="@+id/lblLatitud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Latitud"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toStartOf="@+id/lblLocation"
+                    app:layout_constraintTop_toBottomOf="@+id/lblLocation" />
+
+                <TextView
+                    android:id="@+id/lblLongitud"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Longitud"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toStartOf="@+id/lblLocation"
+                    app:layout_constraintTop_toBottomOf="@+id/lblLatitud" />
+
+                    <TextView
+                        android:id="@+id/txtLatitud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="0.00"
+                        android:textSize="18dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/lblLatitud" />
+
+                    <TextView
+                        android:id="@+id/txtLongitud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="0.00"
+                        android:textSize="18dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/lblLongitud" />
+
+                    <!-- -->
+                    <TextView
+                        android:id="@+id/txtPrecision"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0"
+                        android:textSize="18dp"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toStartOf="@+id/txtLatitud"
+                        app:layout_constraintTop_toTopOf="@+id/txtLatitud" />
+
+                    <TextView
+                        android:id="@+id/txtAltitud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0"
+                        android:textSize="18dp"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toStartOf="@+id/txtLongitud"
+                        app:layout_constraintTop_toTopOf="@+id/txtLongitud" />
+                    <!-- -->
+
+                <TextView
+                    android:id="@+id/lblLineLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/gray_middle"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="@+id/lblLocation"
+                    app:layout_constraintTop_toBottomOf="@+id/lblLongitud"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgPhoto"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/list_camera"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblLineLocation" />
+
+            <TextView
+                android:id="@+id/lblPhoto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="3dp"
+                android:text="Agregue Foto"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgPhoto"
+                app:layout_constraintTop_toTopOf="@+id/imgPhoto" />
+
+                <ImageView
+                    android:id="@+id/imgPhotoArrow"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="2dp"
+                    app:srcCompat="@drawable/ic_baseline_arrow_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/lblPhoto" />
+
+                <ImageView
+                    android:id="@+id/imgPhotoPreview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:cropToPadding="true"
+                    app:layout_constraintTop_toBottomOf="@+id/lblPhoto"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <!--
+    <TextView
+        android:id="@+id/lblLineBottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/gray_soft"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnSend"
+        app:layout_constraintEnd_toEndOf="parent" />
+    -->
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/send"
+        style="@style/appButtonPrimary2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+NOTA:
+=====
+
+Los documentos no aplican para el caso del app móvil:
+
+"10_Matriz de Perfiles y Accesos"
+
+El app es de accesso libre para cualquier persona que los descarge, y no requiere de usuario o clave alguna para su uso.
+
+"11 Manual de Instalacion y Configuracion - Servidor Web"
+
+El servidor web que utiliza el app para el envío de los datos al MINEDU corresponde a un IIS de Microsoft (Internet Information Services), ya instalado en los servidores de Estadística.
+
+"11.1 Manual de Instalacion y Configuracion - Compilado"
+
+La compilación del código fuente del app y del servicio web desarrollado para su funcionamiento se aborda en el documento "16_Software Producido"; numerales 2.1.3 y 2.2.2 respectivamente.
+

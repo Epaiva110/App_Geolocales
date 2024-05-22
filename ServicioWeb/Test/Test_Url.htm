@@ -1,0 +1,56 @@
+<html>
+<head>
+<script src="jquery.js"></script>
+</head>
+
+<body>
+
+<div id="divdivtext1">
+</div>
+<div id="divdivtext2">
+</div>
+
+<script>
+
+        $.get("http://medestadistica2.minedu.local/editor/wcf/Service.svc/GetData", { name: 'Santi', age: '15' }, function (response) {
+            document.getElementById("divdivtext1").innerHTML = response.d;
+            //document.getElementById("divdivtext2").innerHTML = response.d;
+        });
+
+</script>
+
+
+<!--
+http://medestadistica2.minedu.local/editor/Service.svc/GetData	<-- Si funciona
+http://escale3.minedu.gob.pe:8080/editor/Service.svc/GetData
+http://escale.minedu.gob.pe/editor/Service.svc/GetData
+
+
+        $.post("http://localhost:59119/Service.svc/RegisterData", { CodMod: '0798898', Anexo: '0', FotoPath: '//upload/files/' }, function (response, status) {
+            document.getElementById("divdivtext2").innerHTML = response.d;
+        })
+  .done(function() {
+    alert( "second success" );
+  })
+  .fail(function() {
+    alert( "error" );
+  })
+  .always(function() {
+    alert( "finished" );
+  });
+
+
+    [DataContract]
+    public class TestData
+    {
+
+        [DataMember]
+        public string CodMod { get; set; }
+
+    }
+
+,BodyStyle = WebMessageBodyStyle.WrappedRequest, RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json
+
+-->
+</body>
+</html>

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="MINEDU\JIDELACRUZ"
+  DTS:CreatorComputerName="MEDVWAS039"
+  DTS:CreationDate="12/28/2022 3:55:14 PM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{AB0DB60E-5400-46FD-90E2-0EB67ACCB679}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="TestExportaAccess"
+  DTS:DTSID="{91501272-1A30-40E3-BF89-CA33BAB24CFE}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PADRON_EMPATE]"
+      DTS:ObjectName="PADRON_EMPATE"
+      DTS:DTSID="{57406749-4BA9-446B-99B9-E3D0D2854998}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=E:\NotificacionesEmail\PADRON_EMPATE.mdb;Provider=Microsoft.Jet.OLEDB.4.0;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Crea tablas"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Crea tablas"
+      DTS:DTSID="{96CEC5D6-F958-4C3E-A359-4DC0CDDB3F98}"
+      DTS:Description="Execute SQL Task"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{57406749-4BA9-446B-99B9-E3D0D2854998}"
+          SQLTask:SqlStatementSource="CREATE TABLE IIEE_NOUBICADOS (&#xA;OBJECTID Long NOT NULL,&#xA;DIST LongText,&#xA;CODGEO LongText,&#xA;CODLOCAL LongText,&#xA;COD_MOD LongText,&#xA;CEN_EDU LongText,&#xA;NIV_MOD LongText,&#xA;DIR_CEN LongText,&#xA;CEN_POB LongText,&#xA;ESTADO LongText,&#xA;CATCALLE LongText,&#xA;CODCPSIG_OFICIAL LongText,&#xA;NOMCPSIG LongText,&#xA;ANEXO LongText,&#xA;GES_DEP LongText,&#xA;COD_CAR LongText,&#xA;CODOOII LongText,&#xA;CODCPSIG LongText,&#xA;CPMAYOR LongText,&#xA;CASCO_URBA LongText,&#xA;REVI1 LongText,&#xA;IDNIV_MOD Long,&#xA;LATITUD Decimal(18,5),&#xA;LONGITUD Decimal(18,5),&#xA;OBS_EDICION LongText,&#xA;FECHA_UPD_LATLNG VarChar(29),&#xA;FECHA_UPD_OBSEDICION VarChar(29),&#xA;USUARIO LongText,&#xA;NOMBRE LongText,&#xA;APELLIDO LongText,&#xA;EMPRESA LongText,&#xA;EMAIL LongText,&#xA;COD_AREA LongText,&#xA;OBJECTID_PADRON Long,&#xA;IDTIPOPROBLEMATICA Long,&#xA;FECHA_DELETE_LATLNG VarChar(29),&#xA;USUARIO_DELETE LongText,&#xA;LATITUD_CP Decimal(18,5),&#xA;LONGITUD_CP Decimal(18,5),&#xA;EMPATE LongText,&#xA;OBS_ADICIONALES LongText,&#xA;FUENTE_DIR Long,&#xA;FTE_PADRON LongText,&#xA;FTE_DET_UBICACION LongText,&#xA;ANO_GEOREF LongText&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Crea tablas"
+          TopLeft="495,179" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

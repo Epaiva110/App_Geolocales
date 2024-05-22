@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Exporta_Excel", "Exporta_Excel\Exporta_Excel.dtproj", "{1DD60608-2B68-4A6F-A783-53149B4AB16B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DD60608-2B68-4A6F-A783-53149B4AB16B}.Development|Default.ActiveCfg = Development
+		{1DD60608-2B68-4A6F-A783-53149B4AB16B}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

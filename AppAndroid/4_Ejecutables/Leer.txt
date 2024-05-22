@@ -1,0 +1,4 @@
+Versión funcional de la aplicación al 14 de diciembre de 2022
+
+1. Tiene deshabilitado el envío de la foto para la realización de pruebas fuera de la red del MINEDU
+2. El tiempo de espera inicial para la captura inicial de las coordenadas con alta precisión se ajustó a 2 minutos

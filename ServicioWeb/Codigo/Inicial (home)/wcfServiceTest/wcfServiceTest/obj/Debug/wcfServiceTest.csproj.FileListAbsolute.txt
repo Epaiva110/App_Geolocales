@@ -1,0 +1,18 @@
+C:\Users\jinob_000\source\repos\wcfServiceTest\wcfServiceTest\bin\wcfServiceTest.dll.config
+C:\Users\jinob_000\source\repos\wcfServiceTest\wcfServiceTest\bin\wcfServiceTest.dll
+C:\Users\jinob_000\source\repos\wcfServiceTest\wcfServiceTest\bin\wcfServiceTest.pdb
+C:\Users\jinob_000\source\repos\wcfServiceTest\wcfServiceTest\obj\Debug\wcfServiceTest.csprojAssemblyReference.cache
+C:\Users\jinob_000\source\repos\wcfServiceTest\wcfServiceTest\obj\Debug\wcfServiceTest.csproj.CoreCompileInputs.cache
+C:\Users\jinob_000\source\repos\wcfServiceTest\wcfServiceTest\obj\Debug\wcfServiceTest.dll
+C:\Users\jinob_000\source\repos\wcfServiceTest\wcfServiceTest\obj\Debug\wcfServiceTest.pdb
+D:\jidelacruz\Documents\JDM\7_Aplicaciones\ServicioWeb - Movil\Codigo\Inicial (home)\wcfServiceTest\wcfServiceTest\obj\Debug\wcfServiceTest.csproj.AssemblyReference.cache
+D:\jidelacruz\Documents\JDM\7_Aplicaciones\ServicioWeb - Movil\Codigo\Inicial (home)\wcfServiceTest\wcfServiceTest\obj\Debug\wcfServiceTest.csproj.CoreCompileInputs.cache
+D:\jidelacruz\Documents\JDM\7_Aplicaciones\ServicioWeb - Movil\Codigo\Inicial (home)\wcfServiceTest\wcfServiceTest\obj\Debug\wcfServiceTest.dll
+D:\jidelacruz\Documents\JDM\7_Aplicaciones\ServicioWeb - Movil\Codigo\Inicial (home)\wcfServiceTest\wcfServiceTest\obj\Debug\wcfServiceTest.pdb
+D:\epaiva\Documents\7_Aplicativo Movil\ServicioWeb\Codigo\Inicial (home)\wcfServiceTest\wcfServiceTest\bin\wcfServiceTest.dll.config
+D:\epaiva\Documents\7_Aplicativo Movil\ServicioWeb\Codigo\Inicial (home)\wcfServiceTest\wcfServiceTest\bin\wcfServiceTest.dll
+D:\epaiva\Documents\7_Aplicativo Movil\ServicioWeb\Codigo\Inicial (home)\wcfServiceTest\wcfServiceTest\bin\wcfServiceTest.pdb
+D:\epaiva\Documents\7_Aplicativo Movil\ServicioWeb\Codigo\Inicial (home)\wcfServiceTest\wcfServiceTest\obj\Debug\wcfServiceTest.csproj.AssemblyReference.cache
+D:\epaiva\Documents\7_Aplicativo Movil\ServicioWeb\Codigo\Inicial (home)\wcfServiceTest\wcfServiceTest\obj\Debug\wcfServiceTest.csproj.CoreCompileInputs.cache
+D:\epaiva\Documents\7_Aplicativo Movil\ServicioWeb\Codigo\Inicial (home)\wcfServiceTest\wcfServiceTest\obj\Debug\wcfServiceTest.dll
+D:\epaiva\Documents\7_Aplicativo Movil\ServicioWeb\Codigo\Inicial (home)\wcfServiceTest\wcfServiceTest\obj\Debug\wcfServiceTest.pdb

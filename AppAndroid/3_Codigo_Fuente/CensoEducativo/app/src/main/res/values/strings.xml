@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">GeoLocales MINEDU</string>
+    <string name="app_main_title">GeoLocales</string>
+
+    <!-- ... -->
+    <string name="title_activity_login">Muestranos tu Escuela</string>
+    <string name="prompt_user">Código Modular</string>
+    <string name="prompt_password">Clave</string>
+    <string name="action_sign_in">Ingresar</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <!-- Main / Form -->
+    <string name="main_instructions">Siga los siguientes pasos para la obtención y envío de las coordenadas del local:</string>
+    <string name="instructions_item01">Ingrese código modular</string>
+    <string name="instructions_item02">Obtener coordenadas</string>
+    <string name="instructions_item03">Agregar foto</string>
+    <string name="lat">Latitud :</string>
+    <string name="lng">Longitud :</string>
+    <string name="prc">Precisión</string>
+    <string name="alt">Altitud</string>
+    <string name="send">Enviar datos</string>
+
+    <string name="invalid_code">El código ingresado no es válido</string>
+
+    <string name="msg_check_noncode">Debe ingresar un Código Modular</string>
+    <string name="msg_check_nonsizecode">Debe ingresar un Código Modular de 7 dígitos</string>
+    <string name="msg_check_nonvalidcode">Debe ingresar un Código Modular válido</string>
+    <string name="msg_check_noncoords">Debe obtener las coordenadas del local</string>
+    <string name="msg_check_nonphoto">Debe tomar la foto del local</string>
+
+    <string name="confirm_message_title"> Código Modular: %1$s </string>
+    <string name="confirm_message">\nEstá enviando los datos  del servicio</string>
+    <string name="confirm_button">Confirmar</string>
+    <string name="cancel_button">Cancelar</string>
+    <!-- -->
+
+    <!-- GPS -->
+    <string name="configuration_message_title">Activar Ubicación</string>
+    <string name="configuration_message">"\nLa configuración de su ubicación está como 'Desactivado'.\nPor favor activar su ubicación para usar esta app."</string>
+    <string name="configuration_button">Configuración de Ubicación</string>
+
+    <string name="title_gps">Obtener coordenadas</string>
+    <string name="gps_initial">... espere para acceder a su ubicación</string>
+    <string name="gps_wait">... siga esperando para acceder a su ubicación</string>
+    <string name="gps_accuracy">ajustando la precisión de su ubicación ... </string>
+    <string name="gps_accuracy_wait">... siga esperando para mejorar la precisión de su ubicación</string>
+    <string name="gps_activate">Pulse aquí para tomar sus coordenadas</string>
+    <string name="gps_inactive">No se puede acceder a su ubicación. Intente nuevamente en unos minutos.</string>
+    <string name="coords_initial">0.000</string>
+    <string name="precs_initial">0 m.</string>
+
+    <string name="bar_label_high">Buena</string>
+    <string name="bar_label_medium">Regular</string>
+    <string name="bar_label_low">Mala</string>
+    <!-- -->
+
+    <!-- Send -->
+    <string name="wait_message">enviando los datos ...</string>
+    <string name="confirm">"Datos enviados correctamente"</string>
+    <string name="noconfirm">"En estos momentos no tiene conexión a Internet."</string>
+    <string name="thanks">"¡Gracias por su participación!"</string>
+    <string name="nexttime">"Cuando tenga conexión a Internet vuelva a confirmar el estado del envío en el historial"</string>
+    <!-- -->
+
+    <!-- Archive -->
+    <string name="title_archive">Historial de envíos</string>
+    <string name="resume_send">Enviado</string>
+    <string name="resume_nosend">Pendiente</string>
+    <string name="resume_noncode">Errado</string>
+    <!-- -->
+
+</resources>

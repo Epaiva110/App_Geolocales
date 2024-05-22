@@ -1,0 +1,13 @@
+Usuario para la carpeta virtual de las fotos recibibas por la App GeoLocales
+============================================================================
+
+
+User name: fotosapp
+Full name: Fotos app geolocales
+Description: Usuario en medestadistica3 cuyas credenciales se utilizaran para acceder a la carpeta D:\TEMP\0_FOTOS_GEOCENSO\FOTOS_CENSO desde el servidor web en medestadistica2
+
+Password: %3oM144))V1]d1]
+Confirm password: %3oM144))V1]d1]
+
+GEOMINAPPVIRDIR
+%3oM144))V1]d1]

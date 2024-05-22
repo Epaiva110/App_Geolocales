@@ -1,0 +1,114 @@
+<html>
+<head>
+<style>
+#d1{
+border: 0px solid red;
+}
+#d2{
+position:relative;
+border: 1px solid #dedede;
+width:300px;
+margin:0px auto;
+text-align:center;
+}
+.btnbanner{
+display: flex;
+align-items: center;
+background-color:#efefef;
+opacity: 0.6;
+position:absolute;
+height:100%;
+border: 1px solid #dedede;
+top:0px;
+padding:4px;
+box-sizing: border-box;
+font-family:Arial;
+font-size:22px;
+font-weight:bold;
+color:#5a5a5a;
+cursor:pointer;
+}
+.left {
+left:0px;
+}
+.right {
+right:0px;
+}
+</style>
+<script>
+var arrImgs = [];
+var imgMax = 0;
+var imgIndex = 1;
+var strPath = 'fotos/';
+
+arrImgs = ['1.png','3.png'];
+//arrImgs[0]='1.png';
+//arrImgs.push('2.png');
+//arrImgs.push('3.png');
+
+function setImgBanner(){
+
+	imgMax = arrImgs.length;
+	var imgBanner = document.getElementById("imgbanner");
+
+	if (imgMax > 0){
+		imgBanner.src = strPath + arrImgs[0];
+	}
+
+	if (imgMax <= 1){
+		var a = document.getElementById("l1");
+		var b = document.getElementById("l2");
+		a.style.display='none';
+		b.style.display='none';
+	}
+	
+	imgBanner.onload = function() {
+		if (this.naturalWidth > this.naturalHeight){
+		imgBanner.style.width = '300px';
+		imgBanner.style.height = 'auto';
+		}
+		else{
+		imgBanner.style.width = 'auto';
+		imgBanner.style.height = '300px';
+		}		
+	}
+
+}
+
+function ShowImages(Counter){
+	var imgBanner = document.getElementById("imgbanner");
+	imgIndex = imgIndex + Counter;
+	if (imgIndex > imgMax){
+		imgIndex = 1;
+	}
+	else{
+	if (imgIndex == 0){
+		imgIndex = imgMax;
+	}
+	}
+	imgBanner.src = strPath + arrImgs[imgIndex-1];
+
+	//alert(imgBanner.naturalHeight);
+}
+</script>
+</head>
+<body onload="setImgBanner();">
+
+<div id="d1">
+
+<div id="d2">
+	<div id="l1" onclick="ShowImages(1);" class="btnbanner left"><</div>
+	<img src="images/default.png" width="300" id="imgbanner">
+	<div id="l2" onclick="ShowImages(-1);" class="btnbanner right">></div>
+</div>
+
+
+</div>
+
+<!--
+https://www.techiedelight.com/es/remove-inline-css-properties-javascript/#:~:text=En%20JavaScript%20puro%2C%20puede%20usar,la%20style%20atributo%20del%20elemento.
+113975
+-->
+
+</body>
+</html>

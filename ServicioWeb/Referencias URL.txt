@@ -1,0 +1,56 @@
+POST Stream Data
+================
+
+https://social.msdn.microsoft.com/Forums/vstudio/en-US/12293ed1-e89d-4376-8888-3d89896b5582/wcf-webhttpbinding-and-post?forum=wcf
+
+https://www.c-sharpcorner.com/UploadFile/surya_bg2000/developing-wcf-restful-services-with-get-and-post-methods/
+
+
+
+Send data trought Volley
+========================
+
+https://stackoverflow.com/questions/39920843/cant-connect-to-my-localhost-with-volley-to-my-symfony2-api
+
+
+https://stackoverflow.com/questions/44000212/how-to-send-authorization-header-in-android-using-volley-library
+https://google.github.io/volley/request.html
+
+
+https://stackoverflow.com/questions/43884542/java-android-asynchttpclient-how-set-header-accept-an-application-xml-or
+
+
+
+Enviar imagen Andriod
+=====================
+
+https://www.thecrazyprogrammer.com/2016/09/android-upload-image-server-using-volley.html
+
+https://stackoverflow.com/questions/39703655/how-to-upload-image-on-server-using-volley
+
+https://www.simplifiedcoding.net/upload-image-to-server/
+
+https://www.maxester.com/blog/2019/10/04/upload-file-image-to-the-server-using-volley-in-android/
+
+
+
+Recibir UploadFiles in ASP.Net C#
+=================================
+
+https://www.chilkatsoft.com/p/p_534.asp
+
+
+
+APP Inventor - WCF
+==================
+
+http://ai2.appinventor.mit.edu/reference/other/json-web-apis.html
+
+
+ImageView en tiempo de ejecución
+================================
+
+https://www.develou.com/imageview-en-android/
+
+http://www.flipandroid.com/establecer-el-fondo-transparente-de-una-vista-de-imagen-en-android.html
+
